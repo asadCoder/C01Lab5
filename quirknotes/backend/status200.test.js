@@ -272,7 +272,7 @@ test("/getAllNotes - Return list of zero notes for getAllNotes", async () => {
 	const deleteANoteR = await deleteANote.json();
 	expect(deleteANote.status).toBe(200);
 
-	expect(deleteANoteR.response).toBe("1 deleted.");
+	expect(deleteANoteR.response).toBe("1 note(s) deleted.");
   });
   
   test("/deleteAllNotes - Delete three notes", async () => {
@@ -327,10 +327,10 @@ test("/getAllNotes - Return list of zero notes for getAllNotes", async () => {
 	const deleteANoteR = await deleteANote.json();
 	expect(deleteANote.status).toBe(200);
 
-	expect(deleteANoteR.response).toBe("3 deleted.");
+	expect(deleteANoteR.response).toBe("3 note(s) deleted.");
   });
 
-  
+
   
   test("/updateNoteColor - Update color of a note to red (#FF0000)", async () => {
 
